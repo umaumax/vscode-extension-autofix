@@ -6,20 +6,25 @@
   "engines": {
     "vscode": "^1.56.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:vscode-extension-autofix.helloWorld"
-  ],
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:type"],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "vscode-extension-autofix.helloWorld",
-        "title": "Hello World"
+    "commands": [],
+    "configuration": {
+      "type": "object",
+      "title": "Auto fix configuration",
+      "properties": {
+        "autofix.dictionary": {
+          "type": "array",
+          "default": {
+            "languages": ["*"],
+            "words": []
+          },
+          "description": "Auto fix definition list"
+        }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -41,5 +46,10 @@
     "mocha": "^8.4.0",
     "typescript": "^4.3.2",
     "vscode-test": "^1.5.2"
+  },
+  "publisher": "umaumax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umaumax/vscode-extension-autofix.git"
   }
 }
