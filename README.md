@@ -6,11 +6,11 @@ Automatically collecting typo at vscode
 * auto reload `settings.json` config
 
 ### loadmap
-* enable with space pattern
+* [x] enable with space pattern (v0.0.2)
   * e.g. `"; "` -> `": "`
-* enable regex replace
+* [ ] enable regex replace
   * e.g. `(.*) cout` -> `std::cout << \1 << std::endl;`
-* cache build regex pattern
+* [ ] cache build regex pattern
 
 ## Extension Settings
 

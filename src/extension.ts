@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const prevText = doc.getText(new vscode.Range(prevPosition, position));
 			const withLeftBuffer = doc.getText(new vscode.Range(new vscode.Position(line, 0), newPosition));
 
-			const last_word_regex = /[^ \t]*$/;
+			const last_word_regex = /[^ \t]*( )?$/;
 			const matches = last_word_regex.exec(withLeftBuffer);
 			const targetWord = matches && matches.length > 0 ? matches[0] : "";
 
